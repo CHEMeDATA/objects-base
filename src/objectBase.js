@@ -208,7 +208,7 @@ export class ObjectBase {
 		if (this.verbose > 1) console.log(this.name + ".data:", this.data);
 	}
 
-	_saveExportedData(param, input) {
+	_saveExportedData(param) {
 		const exportFunctionName = this._buildExportFunctionName(
 			param.creatorParam
 		);
@@ -218,7 +218,7 @@ export class ObjectBase {
 				`Export function ${exportFunctionName} does not exist on ${this.name}`
 			);
 		}
-		const exportedData = this[exportFunctionName](param, input);
+		const exportedData = this[exportFunctionName](param);
 		if (this.verbose > 1) console.log("exported data from objectBase", exportedData);
 
 		return exportedData;
