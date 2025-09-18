@@ -10,6 +10,8 @@ export class ObjectBase {
 				this._loadImportedData(param, input);
 			} else {
 				this.data = input;
+				const version = 1;
+				this.data["$schema"] = `https://chemedata.github.io/schema/v${version}/schema/${name}.json`;
 			}
 		}
 	}
