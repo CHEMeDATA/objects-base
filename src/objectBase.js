@@ -11,7 +11,6 @@ export class ObjectBase {
 			} else {
 				this.data = input;
 				const version = 1;
-				this.data["$schema"] = `https://chemedata.github.io/schema/v${version}/schema/${name}.json`;
 			}
 		}
 	}
